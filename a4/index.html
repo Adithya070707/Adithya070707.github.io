@@ -1,136 +1,64 @@
  <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Facebook Sign Up</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      display: flex;
-      justify-content: center;
-      padding: 30px;
-    }
-    .container {
-      background: white;
-      padding: 20px 40px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      width: 100%;
-      max-width: 400px;
-    }
-    h1 {
-      color: #1877f2;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .gender-options {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-    }
-    .gender-options label {
-      flex: 1;
-      margin-right: 10px;
-    }
-    .gender-options label:last-child {
-      margin-right: 0;
-    }
-    .gender-options input {
-      width: auto;
-      margin-right: 5px;
-    }
-    .button {
-      background-color: #42b72a;
-      color: white;
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      width: 100%;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .login-link {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .login-link a {
-      color: #1877f2;
-      text-decoration: none;
-    }
-    .dob-select {
-      display: flex;
-      gap: 10px;
-    }
-  </style>
+  <title>Create a new account</title>
 </head>
 <body>
-  <div class="container">
-    <h1>facebook</h1>
-    <h2>Create a new account</h2>
-    <p>It's quick and easy.</p>
-    <form action="#" method="POST">
-      <input type="text" name="firstname" placeholder="First name" required />
-      <input type="text" name="surname" placeholder="Surname" required />
-      
-      <label>Date of birth</label>
-      <div class="dob-select">
-        <select name="day" required>
-          <option value="">Day</option>
-          <!-- Days 1 to 31 -->
-          ${[...Array(31)].map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('')}
-        </select>
-        <select name="month" required>
-          <option value="">Month</option>
-          <option value="1">January</option>
-          <option value="2">February</option>
-          <option value="3">March</option>
-          <option value="4">April</option>
-          <option value="5">May</option>
-          <option value="6">June</option>
-          <option value="7">July</option>
-          <option value="8">August</option>
-          <option value="9">September</option>
-          <option value="10">October</option>
-          <option value="11">November</option>
-          <option value="12">December</option>
-        </select>
-        <select name="year" required>
-          <option value="">Year</option>
-          <!-- Years 1905 to 2025 -->
-          ${Array.from({length: 2025 - 1905 + 1}, (_, i) => 2025 - i)
-            .map(year => `<option value="${year}">${year}</option>`).join('')}
-        </select>
-      </div>
+  <h1>facebook</h1>
+  <h2>Create a new account</h2>
+  <p>It's quick and easy.</p>
 
-      <label>Gender</label>
-      <div class="gender-options">
-        <label><input type="radio" name="gender" value="female" checked> Female</label>
-        <label><input type="radio" name="gender" value="male"> Male</label>
-        <label><input type="radio" name="gender" value="custom"> Custom</label>
-      </div>
+  <form>
+    <table>
+      <tr>
+        <td><input type="text" placeholder="First name" required></td>
+        <td><input type="text" placeholder="Surname" required></td>
+      </tr>
+    </table>
 
-      <input type="email" name="email" placeholder="Mobile number or email address" required />
-      <input type="password" name="password" placeholder="New password" required />
+    <p>Date of birth</p>
+    <select name="day">
+      <!-- Days 1–31 -->
+      <?php for ($d = 1; $d <= 31; $d++) echo "<option>$d</option>"; ?>
+    </select>
 
-      <button class="button" type="submit">Sign Up</button>
-    </form>
-    <div class="login-link">
-      <a href="#">Already have an account?</a>
-    </div>
-  </div>
+    <select name="month">
+      <!-- Months January–December -->
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+      <option>December</option>
+    </select>
+
+    <select name="year">
+      <!-- Years 1905–2025 -->
+      <?php for ($y = 2025; $y >= 1905; $y--) echo "<option>$y</option>"; ?>
+    </select>
+
+    <p>Gender</p>
+    <input type="radio" name="gender" value="female" id="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" value="male" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="custom" id="custom">
+    <label for="custom">Custom</label>
+
+    <br><br>
+    <input type="text" placeholder="Mobile number or email address" required><br><br>
+    <input type="password" placeholder="New password" required><br><br>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <p><a href="#">Already have an account?</a></p>
 </body>
 </html>
 
