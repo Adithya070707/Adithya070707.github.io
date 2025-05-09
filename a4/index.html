@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+    }
+    .container {
+      background: white;
+      padding: 20px 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    h1 {
+      color: #1877f2;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .gender-options {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .gender-options label {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .gender-options label:last-child {
+      margin-right: 0;
+    }
+    .gender-options input {
+      width: auto;
+      margin-right: 5px;
+    }
+    .button {
+      background-color: #42b72a;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .login-link a {
+      color: #1877f2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>facebook</h1>
+    <h2>Create a new account</h2>
+    <p>It's quick and easy.</p>
+    <form action="#" method="POST">
+      <input type="text" name="firstname" placeholder="First name" required />
+      <input type="text" name="surname" placeholder="Surname" required />
+      
+      <label>Date of birth</label>
+      <div style="display: flex; gap: 10px;">
+        <select name="day" required>
+          <option value="">Day</option>
+          <option value="9" selected>9</option>
+          <!-- Add more days as needed -->
+        </select>
+        <select name="month" required>
+          <option value="">Month</option>
+          <option value="May" selected>May</option>
+          <!-- Add more months as needed -->
+        </select>
+        <select name="year" required>
+          <option value="">Year</option>
+          <option value="2025" selected>2025</option>
+          <!-- Add more years as needed -->
+        </select>
+      </div>
+
+      <label>Gender</label>
+      <div class="gender-options">
+        <label><input type="radio" name="gender" value="female" checked> Female</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="custom"> Custom</label>
+      </div>
+
+      <input type="email" name="email" placeholder="Mobile number or email address" required />
+      <input type="password" name="password" placeholder="New password" required />
+
+      <button class="button" type="submit">Sign Up</button>
+    </form>
+    <div class="login-link">
+      <a href="#">Already have an account?</a>
+    </div>
+  </div>
+</body>
+</html>
