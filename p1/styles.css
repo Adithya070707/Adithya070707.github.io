@@ -10,30 +10,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    background-color: orange;
-    color: black;
-    padding: 10px;
-}
-
-li {
-    display: inline-block;
-    font-size: 20px;
-    padding: 5px;
-}
-
-* {
-    margin: 0;
-}
-
-.container {
-    width: 100%;
-    margin: auto
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: orange;
+    background-color: #647eac;
     color: white;
     padding: 10px;
 }
@@ -50,18 +27,66 @@ header a{
 
 .row {
     display: flex;
+    background-color: white;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
 }
+ #projects {
+    background-color: e4a4ec;
+    padding: 40px 20px;
+}
+
+.projects-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: darkgray;
+    color:white;
+    font-size: large;
+}
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.demo-button {
+    padding: 8px 16px;
+    background-color:#e4a4ec;
+    border: 1px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 
 .box {
     width: 500px;
     padding: 30px;
+
+
 }
 
+
+
+
 .btn-signup{
-    background-color: orange;
+    background-color: #647eac;
     margin-top: 10px;
     padding:7px;
     font-size: 20px;
@@ -75,65 +100,49 @@ header a{
 }
 
 .image {
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 .title {
     font-size: 30px;
 }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.projects-section {
-    background-color: #dcd2f0; /* light lavender-like tone as seen */
-    padding: 40px 20px;
+.section-heading {
     text-align: center;
-}
-
-.section-title {
     font-size: 28px;
-    margin-bottom: 30px;
     font-weight: bold;
+    margin: 30px 0 20px;
 }
 
-.project-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 20px;
+.info-box {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
     padding: 20px;
-    width: 250px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.project-card h3 {
-    margin-top: 0;
-    font-size: 20px;
+.info-box ul {
+    padding-left: 20px;
 }
 
-.project-card p {
-    font-size: 14px;
-    margin: 10px 0 20px;
+#services, #about, #contact {
+    padding: 30px 20px;
+}
+#home {
+    background-color: #fff8e1; /* light yellow */
 }
 
-.demo-button {
-    padding: 8px 16px;
-    border: 1px solid black;
-    background-color: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+#services {
+    background-color: #e1f5fe; /* light blue */
 }
 
-.demo-button:hover {
-    background-color: #eee;
+#about {
+    background-color: #e8f5e9; /* light green */
+}
+
+#contact {
+    background-color: #fce4ec; /* light pink */
 }
