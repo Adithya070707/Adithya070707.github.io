@@ -1,53 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #d9a7c7, #fffcdc); /* Soft pink to light yellow */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+* {
+    margin: 0;
 }
 
-.atm-box, .welcome-box {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 300px;
+.container {
+    width: 100%;
+    margin: auto
 }
 
-input {
-  width: 90%;
-  padding: 12px;
-  margin: 12px 0;
-  border: 1px solid #aaa;
-  border-radius: 10px;
-  font-size: 16px;
-  background-color: #f9f9f9;
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #647eac;
+    color: white;
+    padding: 10px;
 }
 
-button {
-  padding: 12px 24px;
-  background-color: #6a5acd; /* Slate blue */
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+header li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
 }
 
-button:hover {
-  background-color: #483d8b; /* Darker blue */
+header a{
+    text-decoration: none;
 }
 
-#errorMsg {
-  color: crimson;
-  margin-top: 12px;
-  font-size: 14px;
+.row {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+ #projects {
+    background-color: e4a4ec;
+    padding: 40px 20px;
+}
+
+.projects-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: darkgray;
+    color:white;
+    font-size: large;
+}
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.demo-button {
+    padding: 8px 16px;
+    background-color:#201f1f1e;
+    border: 1px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.box {
+    width: 500px;
+    padding: 30px;
+
+
+}
+
+
+
+
+.btn-signup{
+    background-color: #647eac;
+    margin-top: 10px;
+    padding:7px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+}
+
+.summary {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.image {
+    border-radius: 50px;
+}
+
+.title {
+    font-size: 30px;
+}
+.section-heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-box ul {
+    padding-left: 20px;
+}
+
+#services, #about, #contact {
+    padding: 30px 20px;
+}
+#home {
+    background-color: #fff8e1; 
+}
+
+#services {
+    background-color: #e1f5fe; 
+}
+#about {
+    background-color: #e8f5e9;
+}
+
+#contact {
+    background-color: #fce4ec; 
+}
+.box:hover{
+    transform:scale(1.1,1.1);
+}
+
+.info-box:hover{
+    transform:scale(1.1,1.1);
+}
+.project-card:hover{
+    transform:scale(1.1,1.1);
+}
+/* Default style for large screens (desktops/laptops) */
+.title {
+    font-size: 30px;
+    text-align: left;
+}
+
+/* Tablets (e.g., iPads) - screen width between 600px and 1024px */
+@media (max-width: 1024px) and (min-width: 601px) {
+    .title {
+        font-size: 26px;
+        color: #3f51b5;
+        text-align: center;
+    }
+}
+
+/* Phones - screen width 600px and below */
+@media (max-width: 600px) {
+    .title {
+        font-size: 22px;
+        color: #d32f2f;
+        text-align: center;
+        font-weight: bold;
+    }
 }
